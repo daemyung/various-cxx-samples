@@ -21,20 +21,15 @@
 # SOFTWARE
 
 #
-# Set the minimum requred version of cmake.
+# Add triangle executable.
 #
-cmake_minimum_required(VERSION 3.1.3)
+add_executable(StlValueModifiers
+	source/stl-value-modifiers.cpp)
 
 #
-# Set project details.
+# Set properties.
 #
-project(various-cxx-samples
-        VERSION   0.0.1
-        LANGUAGES CXX)
-
-#
-# Add subdirectories to build.
-#
-add_subdirectory(stl-heap)
-add_subdirectory(stl-value-modifiers)
-add_subdirectory(ieee754-float32)
+set_target_properties(StlValueModifiers
+	PROPERTIES
+		CXX_STANDARD          17
+		CXX_STANDARD_REQUIRED ON)
